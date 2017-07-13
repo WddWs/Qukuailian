@@ -29,6 +29,7 @@ hr {
 }
 
 .Nav {
+    z-index: 100;
     right: 0;
     margin-top: 17%;
     position: fixed;
@@ -46,6 +47,7 @@ hr {
 }
 
 .top {
+    z-index: 101;
     position: fixed;
     left: 50%;
     margin-left: -32.5%;
@@ -219,6 +221,7 @@ hr {
     background-image: url(../img/backg/stage3-2.png);
     height: 100%;
     width: 100%;
+    background-size: 100% 100%;
 }
 
 @-moz-document url-prefix() {
@@ -272,6 +275,8 @@ hr {
     width: 100%;
     height: 100%;
     background-color: #10111A;
+    position: absolute;
+    z-index: 10;
 }
 
 .stage4-title {
@@ -312,6 +317,7 @@ hr {
     border-bottom: 2px solid #2D82BA;
     transform: rotate(39deg);
     position: absolute;
+    z-index: -1;
 }
 
 .xian1 {
@@ -322,6 +328,7 @@ hr {
     overflow: hidden;
     height: 300px;
     animation: myfirst 2s;
+    z-index: -1;
 }
 
 .xian-lft {
@@ -331,6 +338,7 @@ hr {
     border-bottom: 2px solid #2D82BA;
     transform: rotate(-39deg);
     position: absolute;
+    z-index: -1;
 }
 
 .xian2 {
@@ -341,6 +349,7 @@ hr {
     overflow: hidden;
     height: 300px;
     animation: myfirst 2s;
+    z-index: -1;
 }
 
 .xian-huo {
@@ -350,6 +359,7 @@ hr {
     border-bottom: 2px solid #2D82BA;
     transform: rotate(-43deg);
     position: absolute;
+    z-index: -1;
 }
 
 .xian3 {
@@ -360,4 +370,140 @@ hr {
     overflow: hidden;
     height: 300px;
     animation: myfirst 2s;
+    z-index: -1;
 }
+
+.stage4-font1 {
+    position: absolute;
+    color: #BEDFEF;
+    font-size: 14px;
+    margin-top: -11.6%;
+    margin-left: -1.2%;
+}
+
+.stage4-font2 {
+    position: absolute;
+    color: #BEDFEF;
+    font-size: 14px;
+    margin-top: 0.9%;
+    margin-left: -0.5%;
+}
+
+.stage4-content img {
+    z-index: 10;
+}
+
+.stage5 {
+    width: 100%;
+    height: 100%;
+    margin-top: 51%;
+    background-image: url(../img/backg/stage3-2.png);
+    background-size: 100% 100%;
+}
+
+@-moz-document url-prefix() {
+    .stage5 {
+        background-image: url(../img/backg/stage3.png);
+        margin-top: 46.4%;
+    }
+}
+
+.stage5-title {
+    padding-top: 10%;
+}
+
+.stage5-content {
+    width: 70%;
+    height: 65%;
+    margin: 0 auto;
+}
+
+.stage5-content>div {
+    float: left;
+    height: 90%;
+    width: 24%;
+    margin-top: 5%;
+    opacity: 0;
+}
+
+.stage5-content>div img {
+    width: 65%;
+    height: 260px;
+}
+
+.stage5-content-font {
+    width: 63%;
+    height: 50%;
+    margin: 0 auto;
+    text-align: left;
+    color: #fff;
+}
+
+.stage5-content>div .man {
+    position: absolute;
+    width: 205px;
+    height: 255px;
+    margin-top: -0.5%;
+    margin-left: -0.6%;
+
+
+}
+
+
+.stage6 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.stage6-title {
+    padding-top: 10%;
+}
+
+.stage6-content {
+    width: 43%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.stage6-content > div{
+    height: 50%;
+    width: 21.3%;
+    background-image: url(../img/border/border7.png);
+    float: left;
+    background-size: 100% 100%;
+    margin:6%;
+}
+
+.stage6-content > div img{
+ margin-top: 8%;
+}
+
+@keyframes myf
+{
+from {height: 100%;
+    width: 100%;}
+to {height: 200%;
+    width: 200%;}
+}
+
+.Tu{
+    background-image: url(../img/backg/stage6.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    animation:  myf 200s linear infinite;
+}
+
+.stage7{
+width: 100%;
+height: 10%;
+background-color: #112A55;
+margin-top: 46%;
+position: absolute;
+}
+

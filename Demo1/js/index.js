@@ -1,4 +1,16 @@
 $(document).ready(function() {
+    var topma = '.top-right>div:first';
+    for (i = 0; i <= 6; i++) {
+     ( function(x){
+      	 $(topma).click(function() {
+            var hig = document.body.clientHeight;
+            console.log(hig*x);
+             window.scrollTo(0,hig*x);
+          
+        });
+        })(i);
+        topma = topma + '+div';
+    }
     $(".top-right div").hover(function() {
         $(this).children('hr').animate({
             width: "65%"
@@ -10,12 +22,20 @@ $(document).ready(function() {
     });
     $(".stage2-content > div").hover(function() {
         $(this).animate({
-            marginTop: "-1%"
+            marginTop: "-2%"
         }, 300);
     }, function() {
         $(this).animate({
-            marginTop: "0"
+            marginTop: "-1%"
         }, 300);
+    });
+    $('.stage4-content img').hover(function() {
+        $(this).siblings().css('font-size', '18px');
+    }, function() {
+        $(this).siblings().css('font-size', '14px');
+    });
+    $('.stage5-content>div .man').mouseenter(function() {
+        $(this).css('animation', 'rotateOut 2s');
     });
     $(window).scroll(function() {
         var a = document.body.clientHeight;
@@ -24,17 +44,21 @@ $(document).ready(function() {
         if (a - s <= a * 0.4 && flagxx == 0) {
             flagxx = 1;
             $(".stage2-content>div:first ").animate({
-                opacity: 1
-            }, 300, function() {
+                opacity: 1,
+                marginTop: "-1%"
+            }, 500, function() {
                 $(".stage2-content>div:first + div").animate({
-                    opacity: 1
-                }, 300, function() {
+                    opacity: 1,
+                    marginTop: "-1%"
+                }, 500, function() {
                     $(".stage2-content>div:first +div+div").animate({
-                        opacity: 1
-                    }, 300, function() {
+                        opacity: 1,
+                        marginTop: "-1%"
+                    }, 500, function() {
                         $(".stage2-content>div:first +div+div+div").animate({
-                            opacity: 1
-                        }, 300);
+                            opacity: 1,
+                            marginTop: "-1%"
+                        }, 500);
                     });
                 });
             });
@@ -73,9 +97,27 @@ $(document).ready(function() {
                             setInterval("show2()", 900);
                             setInterval("show3()", 1200);
                             $(".stage4-content>div>div:first +div+div+div+div").delay(2200).animate({
-                            opacity: 1
-                        },300);
+                                opacity: 1
+                            }, 300);
                         });
+                    });
+                });
+            });
+        }
+        if (s - a >= a * 2.7 && flagxxxx == 0) {
+            flagxxx = 1;
+            $(".stage5-content>div:first ").animate({
+                opacity: 1
+            }, 500, function() {
+                $(".stage5-content>div:first +div").animate({
+                    opacity: 1
+                }, 500, function() {
+                    $(".stage5-content>div:first +div+div").animate({
+                        opacity: 1
+                    }, 500, function() {
+                        $(".stage5-content>div:first +div+div+div").animate({
+                            opacity: 1
+                        }, 500);
                     });
                 });
             });
@@ -88,6 +130,7 @@ $(document).ready(function() {
 });
 var flagxx = 0;
 var flagxxx = 0;
+var flagxxxx = 0;
 
 function show() {
     $('.xian-lft2').addClass('xian-lft');
